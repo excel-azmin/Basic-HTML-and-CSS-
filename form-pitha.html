@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/image.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/form-pith.css">
+    <title>My Pitha Ghor</title>
+</head>
+<body>
+    <header>
+        <h1> Welcome to Pitha Ghor</h1>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Order your favorite Pitha</h2>
+            <form>
+                <label for="name">Your Full Name:
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </label>
+                <label for="email">Your Email:
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </label>
+                <label for="phone">Your Phone Number:
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+                </label>
+                <fieldset>
+                    <legend>Select your favorite Pitha and Vorta</legend>
+                    <label for="chitoi">
+                        <input type="radio" name="pitha" id="chitoi"> Chitoi Pitha
+                    </label>
+                    <label for="bhapa">
+                        <input type="radio" name="pitha" id="bhapa"> Bhapa Pitha
+                    </label>
+                    <label for="patishapta">
+                        <input type="radio" name="pitha" id="patishapta"> Patishapta Pitha
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Select your favorite Vorta</legend>
+                    <label for="shutki">
+                        <input type="checkbox" name="vorta" id="shutki"> Shutki Vorta
+                    </label>
+                    <label for="beguni">
+                        <input type="checkbox" name="vorta" id="beguni"> Beguni Vorta
+                    </label>
+                    <label for="alu">
+                        <input type="checkbox" name="vorta" id="alu"> Alu Vorta
+                    </label>
+                </fieldset> 
+
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit Order">
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Pitha Ghor. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/table.css">
+    <title>HTML Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td  {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./blogs.html">Blog</a></li>
+                <li><a href="./form-pitha.html">Pitha Ghor</a></li>
+                <li>
+                    <a href="#">Mega Menu</a>
+
+                    <ul class="dropdown">
+                        <li><a href="./blogs.html">Blog</a></li>
+                        <li><a href="./form-pitha.html">Pitha Ghor</a></li>
+                        <li><a href="inext.html">Index</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Simple HTML Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Footer 1</td>
+                <td colspan="1">Footer 1</td>
+                <!-- <td>Footer 2</td>       
+                <td>Footer 3</td> -->
+            </tr>
+        </tfoot>    
+    </table>
+    
+    </main>
+    <footer>  </footer>
+</body>
+</html>
