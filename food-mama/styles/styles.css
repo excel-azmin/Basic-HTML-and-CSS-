@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* .work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    padding: 21px 32px 21px 32px;
+    border-radius: 8px;
+    background: rgb(82, 195, 3);
+    color: rgb(255, 255, 255);
+    font-family: Work Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: center;
+    border: none;
+}
+
+.button-container {
+    text-align: center;
+}
+
+#hero {
+    
+    background-image: linear-gradient(0deg, rgb(9, 9, 9) 3.482%,rgba(16, 16, 16, 0) 101.632%), url(../assets/hero-bg.png);
+    width: 1920px;
+    height: 919px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+#hero .hero-container {
+    width: 1023px;
+    height: 391px;
+    }
+#hero .hero-container .sub-title {
+    color: rgb(255, 255, 255);
+    font-family: Work Sans;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 16px;  
+}
+
+#hero .hero-container .title {
+    color: rgb(255, 255, 255);
+    font-family: Work Sans;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#hero .hero-container .description{
+    color: rgb(255, 255, 255);
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 32px;
+}
+
+/* Card Box Section */
+#card-box  {
+    max-width: 1200px; 
+    margin: 50px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+}
+
+
+#card-box .sub-title{
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    opacity: 0.6;
+    margin-bottom: 16px; 
+
+}
+#card-box .title {
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+
+#card-box .card-container {
+    margin-top: 48px;
+    display: flex;;
+    justify-content: center; 
+    gap: 10px;
+}
+
+#card-box .all-products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+     max-width: 325px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* This adds consistent spacing between all card children */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding inside the card */
+    background: #fff; /* Add background color if needed */
+    border-radius: 12px; /* Optional: rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+    position: relative;
+    
+}
+
+.card .card-image {
+    width: 350px;
+    height: auto;
+}
+
+.card .card-image img {
+   width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: rounded corners for image */
+
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text inside the card */
+}
+
+.card .restaurant{
+    padding: 8px 16px; /* Adjusted padding */
+    border-radius: 8px;
+    background: rgba(47, 110, 2, 0.15);
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(47, 110, 2);
+    margin: 8px 0; /* Add margin above and below */
+    width: fit-content; /* Make it only as wide as its content */
+}
+
+.card .discount{
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 47px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.card .details{
+    margin: 24px 0px;
+    opacity: 0.7;
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+  
+.card .price {
+    margin: 10px 2px ;
+    border: 1px solid rgb(47, 110, 2);
+    border-radius: 20px;
+    padding: 8px 16px; /* Adjusted padding */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(47, 110, 2);
+    background-color: #fff;
+}
+
+#newsletter {
+    margin-top: 100px;
+    padding: 10px 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.news-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.news-container .left-side {
+    width: 960px;
+
+}
+
+.news-container .left-side img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.news-container .right-side {
+    width: 830px;
+}
+
+.news-container .right-side .title {
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.news-container .right-side .description {
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 24px 0px;
+    opacity: 0.6;
+}
+
+.news-container .right-side .follow-us {
+    text-align: center;
+    padding: 30px 10px 30px 10px;
+    margin: 48px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(16, 16, 16, 0.2);
+    border-top: 1px solid rgba(16, 16, 16, 0.2);
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: center;
+    opacity: 0.7;
+
+}
+
+.news-container .right-side .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-container .right-side .social-icons img {
+    margin: 0 10px;
+    object-fit: cover;
+}
+
+#footer {
+    width: 1920px;
+    background-image: url(../assets/social-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-content {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 0;
+    margin: 50px auto;
+}
+
+
+
+.footer-content .title {
+    margin-top: 100px;
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.footer-content .description {
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 14px 0px;
+    opacity: 0.6;
+}
+
+.footer-content .follow-us {
+    text-align: center;
+    width: 100%;
+    padding: 30px 10px 30px 10px;
+    margin: 30px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(16, 16, 16, 0.2);
+    border-top: 1px solid rgba(16, 16, 16, 0.2);
+    color: rgb(16, 16, 16);
+    font-family: Work Sans;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: center;
+    opacity: 0.7;
+
+}
+
+.footer-content .social-icons {
+    width: 330px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content .social-icons img {
+    width: 100%;
+    object-fit: cover;
+}

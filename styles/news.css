@@ -1,0 +1,28 @@
+div {
+    background-color: #d3d1d1;
+    padding: 20px;
+    border-radius: 5px;
+    /* text-decoration: overline; */
+    border: 10px  solid #866767;
+    box-shadow: 5px 5px  5px #200044;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.highlight {
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #200044;
+}
+
+q {
+    font-style: italic;
+    color: #200044;
+    background-color: antiquewhite;
+}
+
+h2 {
+    color: #200044;
+    font-size: 24px;
+    text-align: center;
+}
