@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* *{
+    height: 100%;
+    width: auto;
+} */
+
+/* Common Styles */
+.feature-title {
+    color: rgb(18, 18, 18);
+    font-family: Inter;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 79px;
+    letter-spacing: 0px;
+    text-align: left;    
+}
+
+.feature-desc {
+    color: rgb(112, 112, 112);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;    
+}
+
+.primary-button {
+    border-radius: 5px;
+    background: rgb(255, 89, 89);
+    padding: 16px 50px 16px 50px;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+}
+.secondary-button {
+    padding: 16px 40px 16px 40px;
+    color: rgb(112, 112, 112);   
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left; 
+    border: none;
+    cursor: pointer;
+}
+
+.text-decoration {
+    margin-bottom: -20px;
+}
+
+/* Header Styles */
+
+.header {
+    padding: 0 200px;
+    background: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .donate-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header .right-side{
+    /* border: 1px solid rgb(229, 229, 229); */
+    padding: 100px;
+    
+}
+
+.header .right-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Donate today section styles */
+
+.donate-today {
+    margin: 50px 0;
+    padding: 0 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+
+.donate-today .donate-amount {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.donate-today .donate-amount .amount {
+    padding: 40px 23px;
+    color: rgb(112, 112, 112);
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 5px;
+    background: rgb(250, 250, 250);
+}
+
+.donate-today .donate-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+}
+
+.donate-today .donate-input input[type="number"] {
+    padding: 13px;
+    color: rgb(179, 179, 179);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    border: none;
+}
+
+.donate-today .donate-input input[type="number"]:focus {
+    outline: none;
+    border: 1px solid rgb(255, 89, 89);
+}
+
+/* our-donate-plan section styles */
+
+.our-donate-plan {
+    margin: 50px 0;
+    padding: 0 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.our-donate-plan .donate-plan-cards{
+    margin-top: 100px;
+    padding: 60px, 22px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.our-donate-plan .donate-plan-cards .card {
+    padding: 80px 25px;
+    border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(79, 157, 166, 0.1);
+    margin-top: -30px;
+}
+
+.our-donate-plan .donate-plan-cards .color2 {
+    background: rgba(255, 89, 89, 0.1);
+}
+.our-donate-plan .donate-plan-cards .color3 {
+    background: rgb(237, 238, 226);
+}
+
+.our-donate-plan .donate-plan-cards .card img {
+    /* width: 80px; */
+    height: auto;
+}
+
+.our-donate-plan .homeless, .message {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.our-donate-plan .homeless .right-side {
+    padding: 50px;
+}
+.our-donate-plan .homeless img, .message img {
+    
+    width: 100%;
+    height: auto;
+    border-radius: 200px 20px;
+}
+
+.news-letter{
+    margin: 50px 335px;
+    padding: 50px 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 244, 214);
+}
+
+.news-letter .newsletter-input {
+    margin-top: 50px;
+    display: flex;
+}
+
+.news-letter .newsletter-input input[type="email"] {
+    padding: 13px;
+    color: rgb(179, 179, 179);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    border: none;
+    width: 100%;
+}
+
+.news-letter .newsletter-input input[type="email"]:focus {
+    outline: none;
+    border: 1px solid rgb(255, 89, 89);
+}
+
+.news-letter .newsletter-input .primary-button {
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* Footer styles */
+
+.footer-section {
+    padding: 30px 200px;
+    background: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-section .footer-title {
+    color: rgb(255, 89, 89);
+    font-family: Lobster;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.footer-section .ooter-desc {
+    color: rgb(217, 219, 225);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
