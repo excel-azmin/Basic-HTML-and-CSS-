@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        section {
+            display: grid;
+            /* grid-template-columns: 200px 100px 300px 200px 100px; */
+            grid-template-columns: repeat(7, 1fr);
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            column-gap: -10px;
+            
+        }
+        .days, .day {
+           background-color: aqua;
+           border-radius: 5px;
+           margin: 10px;
+           padding: 10px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 1.5em;
+        }
+        .day {
+            background-color: lightcyan;
+            font-weight: bold;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 20px;
+            column-gap: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .products-container{
+            
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: start;
+            margin: 5px;
+        }
+        .products-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Responsive  */
+        @media screen and (max-width: 576px){
+            .products {
+                grid-template-columns: repeat(1, 1fr);
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: 576px) and (max-width: 992px){
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+            .products {
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: center;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .products {
+                grid-template-columns: repeat(5, 1fr);
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <section>
+        <div class="item">Item Number 1</div>
+        <div class="item">Item Number 2</div>
+        <div class="item">Item Number 3</div>
+        <div class="item">Item Number 4</div>
+        <div class="item">Item Number 5</div>
+        <div class="item">Item Number 6</div>
+        <div class="item">Item Number 7</div>
+        <div class="item">Item Number 8</div>
+        <div class="item">Item Number 9</div>
+        <div class="item">Item Number 10</div>
+        <div class="item">Item Number 11</div>
+        <div class="item">Item Number 12</div>
+        <div class="item">Item Number 13</div>
+        <div class="item">Item Number 14</div>
+        <div class="item">Item Number 15</div>
+        <div class="item">Item Number 16</div>
+        <div class="item">Item Number 17</div>
+        <div class="item">Item Number 18</div>
+        <div class="item">Item Number 19</div>
+        <div class="item">Item Number 20</div>
+        <div class="item">Item Number 21</div>
+        <div class="item">Item Number 22</div>
+        <div class="item">Item Number 23</div>
+        <div class="item">Item Number 24</div>
+        <div class="item">Item Number 25</div>
+        <div class="item">Item Number 26</div>
+        <div class="item">Item Number 27</div>
+        <div class="item">Item Number 28</div>
+        <div class="item">Item Number 29</div>
+        <div class="item">Item Number 30</div>
+    </section> -->
+    
+    <!-- <section>
+        <div class="day">M</div>
+        <div class="day">T</div>
+        <div class="day">W</div>
+        <div class="day">T</div>
+        <div class="day">F</div>
+        <div class="day">S</div>
+        <div class="day">S</div>
+        <div class="days">1</div>
+        <div class="days">2</div>
+        <div class="days">3</div>
+        <div class="days">4</div>
+        <div class="days">5</div>
+        <div class="days">6</div>
+        <div class="days">7</div>
+        <div class="days">8</div>
+        <div class="days">9</div>
+        <div class="days">10</div>
+        <div class="days">11</div>
+        <div class="days">12</div>
+        <div class="days">13</div>
+        <div class="days">14</div>
+        <div class="days">15</div>
+        <div class="days">16</div>
+        <div class="days">17</div>
+        <div class="days">18</div>
+        <div class="days">19</div>
+        <div class="days">20</div>
+        <div class="days">21</div>
+        <div class="days">22</div>
+        <div class="days">23</div>
+        <div class="days">24</div>
+        <div class="days">25</div>
+        <div class="days">26</div>
+        <div class="days">27</div>
+        <div class="days">28</div>
+        <div class="days">29</div>
+        <div class="days">30</div>
+        <div class="days">31</div>
+        <div class="days">32</div>
+        <div class="days">33</div>
+        <div class="days">34</div>
+        <div class="days">35</div>
+    </section> -->
+
+    <section class="products">
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 1</h1>
+            <p>Price : 100</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quo officiis cum adipisci temporibus provident facilis error iste laboriosam maxime fugiat animi dolorum vitae cupiditate a ad, quidem similique fuga!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 2</h1>
+            <p>Price : 100</p>
+            <p>Repudiandae, fuga similique iusto, quaerat quo molestiae inventore ex, animi laborum repellendus ab asperiores dolore cumque provident sequi culpa quia debitis optio molestias. Voluptatum quia non molestias eos vel excepturi.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 3</h1>
+            <p>Price : 100</p>
+            <p>Repudiandae at facere dolorem unde sed numquam quae! Quidem repudiandae, ipsum delectus praesentium laboriosam sint recusandae porro accusamus aspernatur eveniet facere libero debitis molestiae error deserunt facilis ratione ullam animi.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 4</h1>
+            <p>Price : 100</p>
+            <p>Adipisci ipsam dolorum magnam incidunt, aperiam in tempore consequatur at repudiandae nihil dolore praesentium ducimus fugit quasi repellat pariatur eos facere aut nobis! Quasi temporibus facere consectetur, doloribus sint ipsa.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 5</h1>
+            <p>Price : 100</p>
+            <p>Tempore ex consequuntur officia necessitatibus minima, consectetur iste! Magni molestiae itaque in nesciunt laborum inventore incidunt facere placeat assumenda adipisci quaerat repudiandae quod aspernatur, animi perferendis, fuga et alias eligendi!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 6</h1>
+            <p>Price : 100</p>
+            <p>Tenetur explicabo minus dicta accusantium. Ipsam facere reprehenderit eligendi, voluptas aperiam adipisci commodi nihil sed blanditiis totam, harum, maxime in quibusdam perferendis dolores architecto corrupti nisi eos pariatur quia suscipit!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 7</h1>
+            <p>Price : 100</p>
+            <p>Possimus quasi fugiat provident repellat tempore omnis atque excepturi quaerat laborum ullam harum commodi aspernatur consequatur consequuntur aperiam soluta corrupti quod, fugit, temporibus laudantium ratione officiis, et eligendi! Voluptates, possimus.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 8</h1>
+            <p>Price : 100</p>
+            <p>Deserunt eos non sequi earum aliquid id in sunt sapiente, inventore ea, nostrum praesentium quam alias soluta sit totam nesciunt eveniet eaque, possimus nulla harum. Ex eligendi earum error ratione.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 9</h1>
+            <p>Price : 100</p>
+            <p>Dolor aperiam beatae illum aliquam molestiae harum libero facilis fuga repudiandae! Minima itaque esse, doloribus necessitatibus rerum adipisci, autem, voluptatem fugiat labore iusto qui sint odit reprehenderit aliquam nam ipsum?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 10</h1>
+            <p>Price : 100</p>
+            <p>Accusamus fuga, libero quos aspernatur temporibus sequi cum incidunt similique ratione necessitatibus molestias, distinctio iste voluptates, totam quibusdam neque magni maiores illum delectus inventore. Provident explicabo consectetur reiciendis quas similique?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 11</h1>
+            <p>Price : 100</p>
+            <p>Repudiandae repellat odio illum expedita commodi rerum beatae ducimus blanditiis provident vel saepe, cumque corrupti impedit suscipit explicabo accusamus adipisci nostrum cum accusantium autem tenetur ex incidunt harum. Ipsum, consequuntur!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 12</h1>
+            <p>Price : 100</p>
+            <p>Illum aliquid rem perspiciatis possimus repellendus cum! Aspernatur dicta nihil quos at eos inventore reprehenderit, quam corrupti pariatur doloribus. Vero quis quod iure possimus quasi odit praesentium. Esse, est in?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 13</h1>
+            <p>Price : 100</p>
+            <p>Eaque deserunt, odit ab omnis iste voluptates nulla nostrum neque illo incidunt unde eveniet saepe est labore impedit id quaerat reiciendis velit, facilis consequatur. Impedit, cum. Assumenda nulla facere quo.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 14</h1>
+            <p>Price : 100</p>
+            <p>In ducimus velit, voluptate iusto ipsum cumque quia suscipit optio autem perferendis ab consectetur amet aut et, laudantium dignissimos debitis voluptatum nobis esse maiores harum repellendus molestias? Iure, velit tempore!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 15</h1>
+            <p>Price : 100</p>
+            <p>Consequuntur sed sapiente ipsam, ab, tempora quam obcaecati aperiam ex odit fugiat similique maxime nihil? Quae deserunt nisi odit expedita ipsa necessitatibus beatae totam dolorem minus, sit quos cum fuga?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 16</h1>
+            <p>Price : 100</p>
+            <p>Minima dignissimos voluptates deleniti ipsum magni quasi incidunt quos tempore quisquam, voluptatum nulla cumque ab ipsam, deserunt laboriosam nemo praesentium velit! Vero atque, quos ratione obcaecati dolorem voluptatum voluptatibus iure!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 17</h1>
+            <p>Price : 100</p>
+            <p>Iusto, amet exercitationem? Praesentium cupiditate explicabo, fugiat vitae officiis expedita quae eum. Enim nobis odit consequuntur non suscipit cumque labore! Provident sunt quos hic culpa quidem? Architecto accusantium quisquam quae?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 18</h1>
+            <p>Price : 100</p>
+            <p>Odit repudiandae asperiores ex beatae est eligendi, nesciunt sint reiciendis doloribus sunt error, possimus debitis neque voluptatum sapiente recusandae consequuntur odio culpa aperiam eveniet similique ab qui molestiae nam. Eveniet.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 19</h1>
+            <p>Price : 100</p>
+            <p>Veniam rerum esse ullam commodi obcaecati vero quaerat sit voluptate sapiente error dolor magnam provident fugit architecto sint aliquid voluptatum quia fuga mollitia unde necessitatibus, totam veritatis doloremque et. Magni?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 20</h1>
+            <p>Price : 100</p>
+            <p>Vitae distinctio blanditiis, inventore enim facilis earum necessitatibus temporibus corrupti iste. Dignissimos saepe corporis, suscipit rem eum exercitationem necessitatibus ratione sequi, consequatur eveniet inventore. Aut non quae recusandae iusto qui.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 21</h1>
+            <p>Price : 100</p>
+            <p>Repudiandae deleniti blanditiis nisi id minus! Ipsam ducimus vitae ea accusamus tempore, eius officiis quam eos ut molestias, earum temporibus! Perspiciatis laudantium dicta necessitatibus fuga ipsa recusandae reprehenderit nulla qui.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 22</h1>
+            <p>Price : 100</p>
+            <p>Incidunt delectus recusandae laboriosam suscipit placeat ducimus dicta, ipsum quas est modi animi deserunt sit similique facilis dolore in ea fuga atque corporis non. Amet facilis illo saepe ipsum expedita?</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 23</h1>
+            <p>Price : 100</p>
+            <p>Voluptatibus consectetur illum eligendi aliquam sapiente vitae tempora aperiam saepe temporibus ullam, veniam fuga. Est, labore? A odio corrupti labore sint eaque ab cupiditate, laudantium itaque nostrum, numquam dignissimos esse.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 24</h1>
+            <p>Price : 100</p>
+            <p>Mollitia, asperiores aliquid? Consectetur dolorem porro saepe vitae animi veritatis eaque ex blanditiis obcaecati nostrum, harum, impedit voluptates a, culpa debitis illo dolores veniam alias quisquam. Vitae error dignissimos sint!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 25</h1>
+            <p>Price : 100</p>
+            <p>Accusamus, enim repellat. Voluptatum neque tempore quam placeat, dicta debitis, est libero eveniet beatae velit illum accusamus reprehenderit quas hic ex dolores dolorum veritatis laboriosam nostrum repudiandae cumque. Praesentium, minima.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 26</h1>
+            <p>Price : 100</p>
+            <p>Odio omnis sapiente pariatur nam nesciunt dolorem, explicabo aliquid vero aperiam ad aliquam et maxime? Sunt suscipit totam commodi, sapiente rerum quisquam cupiditate necessitatibus exercitationem autem, veritatis quis, iusto eum.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 27</h1>
+            <p>Price : 100</p>
+            <p>Aliquam, commodi inventore deserunt consequatur in maxime. Assumenda cumque impedit asperiores quasi aliquid, sed nobis porro dolorum laboriosam sint magni illum voluptatibus totam pariatur labore velit, placeat tenetur dicta error.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 28</h1>
+            <p>Price : 100</p>
+            <p>Blanditiis possimus tenetur praesentium. Facilis maxime tenetur ratione cupiditate praesentium doloribus adipisci! Consequatur, reprehenderit sunt. Vel corrupti modi, quisquam numquam, odit architecto molestias velit animi aliquid sequi deserunt, blanditiis perspiciatis!</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 29</h1>
+            <p>Price : 100</p>
+            <p>Odio voluptatem exercitationem cumque enim quidem ipsa esse non doloremque eaque dolorem accusantium quaerat tenetur maiores provident est harum suscipit, nobis eligendi a! Nobis unde id voluptates illo voluptate. Tenetur.</p>
+        </div>
+        <div class="products-container">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="">
+            <h1>TP-Link Router 30</h1>
+            <p>Price : 100</p>
+            <p>Voluptates velit illo quos sed dolor dicta similique asperiores totam assumenda molestias! Doloremque officia laborum quos voluptate repellendus temporibus voluptatibus atque aut veniam sequi, iste, corporis nemo sapiente alias optio!</p>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

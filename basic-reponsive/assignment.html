@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Assignment</title>
+    <style>
+        /* section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+        }
+        .left-side {
+            width: 600px;
+            height: 100vh;
+            border: 1px solid black;
+            background-color: lightgray;
+        }
+        .right-side {
+            width: 1200px;
+            height: 100vh;
+            border: 1px solid black;
+            background-color: lightblue;
+        }
+
+        @media screen and (max-width: 576px){
+            section {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .left-side, .right-side {
+                width: 100%;
+                height: 25vh;
+            }
+            .right-side {
+                width: 100%;
+                height: 70vh;
+            }
+        } */
+         #list-view {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            
+         }
+         .left-side {
+            width: 700px;
+            height: 230px;
+            border: 1px solid black;
+            background-color: lightgray;
+         }
+         .left-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            height: auto;
+         }
+         .right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            
+         }
+
+         @media screen and (max-width: 576px) {
+            #list-view {
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .left-side, .right-side {
+                width: 100%;
+                height: auto;
+            }
+         }
+
+    </style>
+</head>
+<body>
+    <!-- <section>
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+    </section> -->
+
+    <section id="list-view">
+        <div class="left-side">
+            <img src="https://www.startech.com.bd/image/cache/catalog/router/tp-link/tl-wr841n/tl-wr841n-001-500x500.webp" alt="Router Image" style="width: 100%; height: auto;">
+        </div>
+        <div class="right-side">
+            <h2>TP Link Router</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non omnis repudiandae officiis laboriosam labore, doloribus, nisi aliquid quod ea ullam qui aliquam atque quaerat reiciendis sed possimus perferendis fugit quasi saepe dicta accusamus ipsum nam mollitia? Libero repudiandae eos dolorem molestiae maxime incidunt aliquid architecto in quibusdam, accusamus sit, fugiat consectetur minus earum voluptas, veritatis praesentium ad doloribus iusto at! Quaerat alias iusto harum veritatis consequatur atque cum dignissimos repudiandae totam labore magni dolor consectetur quod laborum debitis illo optio facere, explicabo iure architecto voluptates maiores, sapiente odit ratione? Laudantium ab similique necessitatibus quam maxime aut culpa accusantium facilis. Neque.</p>
+            <button> Buy Now</button>
+        </div>
+
+    </section>
+    
+</body>
+</html>
