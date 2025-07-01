@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #f2f2f2;
+    --accent-color: rgb(224, 44, 109);
+    --text-color: #292929;
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+/* Common Styles */
+
+i {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+i:hover {
+    color: var(--primary-color);
+}
+
+.title-text {
+    color: var(--text-color);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.main-title {
+    color: rgb(58, 58, 58);
+    font-family: Poppins;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0px;
+    text-align: left; 
+}
+
+.main-desc {
+    color: rgb(58, 58, 58);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;    
+}
+
+.primary-btn {
+    padding: 10px 24px 10px 24px;
+    border-radius: 41px;
+    background: rgb(224, 44, 109);
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+}
+
+.product-title{
+    color: var(--text-color);
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+/* Header Styles */
+
+header {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav span {
+    color: var(--accent-color);
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-family: var(--font-family);
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section Styles */
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.hero i{
+    color: var(--secondary-color);
+    padding: 5px;
+    transition: 1s ease;
+}
+
+.hero .primary-btn:hover i{
+    translate: 8px;
+}
+
+.hero .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-image: url(./images/Circle\ design.svg);
+    height: calc(100vh - 400px);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.hero .right-side img {
+    height: auto;
+    max-width: 600px;
+}
+
+
+/* main section styles */
+
+main {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Brand Images Section Styles */
+
+.brand-imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 100px 50px 0 50px ;
+    box-shadow: 0 1px  rgba(0, 0, 0, 0.1);
+
+}
+
+.brand-imgs img {
+    padding: 20px;
+}
+
+/* Products Section Styles */
+
+.popular-collection {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
