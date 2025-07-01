@@ -388,8 +388,6 @@ footer .social-icons i {
 
 @media screen and (max-width: 576px){
     header nav {
-        /* flex-direction: ; */
-        max-width: 576px;
         margin: 0 auto;
     }
 
@@ -402,9 +400,16 @@ footer .social-icons i {
     }
 
     .hero {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        justify-content: center;
         gap: 50px;
+    }
+
+    .hero .right-side {
+        justify-content: center;
+         background-position: right;
     }
 
     .hero .right-side img {
