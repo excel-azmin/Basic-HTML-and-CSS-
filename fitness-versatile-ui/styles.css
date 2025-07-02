@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #111111;
+    --secondary-color: #e6533c;
+    --text-color: #ffffff;
+    --background-color: #f5f5f5;
+    --gray-color: #777777;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Common styles */
+
+.header-text {
+    color: rgb(230, 83, 60);
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.primary-btn{
+    border-radius: 42px;
+    background: var(--secondary-color);
+    padding: 16px 40px 16px 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.secondary-btn {
+    padding: 16px 40px 16px 40px;
+    box-sizing: border-box;
+    border: 1px solid var(--text-color);
+    border-radius: 42px;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    background-color: var(--primary-color);
+}
+
+
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    background: var(--primary-color)
+}
+
+.inter-default {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+    /* background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(17, 17, 17, .8) 100%),
+     linear-gradient(0.00deg, rgb(17, 17, 17),rgba(17, 17, 17, 0) 100%); */
+    background-image: linear-gradient(0deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%), url(./images/Images\ 2.png);
+    background-repeat: no-repeat;
+    background-position: 1250px 30px;
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: white */
+    
+}
+
+.header-container nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header-container nav ul li:last-child{
+    display: none;
+}
+
+.header-container nav ul a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 0 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-container nav ul a:hover {
+    padding: 8px 20px 8px 20px;
+    border-radius: 46px;
+    background: var(--secondary-color);
+}
+
+/* Hero section */
+
+.hero-container {
+    max-width: 1440px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-container .hero-title {
+    color: var(--text-color);
+    font-family: Inter;
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.hero-container .hero-title span {
+    font-family: "Dawning of a New Day", cursive;
+    font-size: 150px;
+    font-weight: 100;
+}
+
+.hero-container .hero-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.hero-container .hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero-container .right-side {
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.hero-container .right-side .workout {
+    max-width: 220px;
+    padding: 17px 24px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-container .right-side .free-workout {
+    position: absolute;
+    margin: 50px 0 50px 400px;
+}
+
+.hero-container .right-side .workout-title {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-align: left;
+} 
+
+.hero-container .right-side .triangle-shape {
+    position: relative;
+    margin: 200px 0 0 0;
+    width: 0;
+    height: 0;
+    border: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent var(--text-color) transparent;
+    transform: rotate(90deg);
+}
+
+.hero-container .right-side  .video-tutorial{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.hero-container .right-side .workout-desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+
+}
+
+.hero-container .right-side .round-shape {
+    width: 40px;
+    height: 40px;
+    background: rgb(230, 83, 60);
+    border-radius: 50%;
+}
+
+/* Habits section */
+
+#change-habit {
+    max-width: 1440px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#change-habit .section-title {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;    
+}
+
+#change-habit .section-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: center;    
+}
+
+#change-habit .habit-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.habit-card .habit-img img{
+    border: 3px solid var(--gray-color);
+    border-radius: 50%;
+    margin-bottom: 50px;
+
+}
+
+.habit-card .habit-title{
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.habit-card .habit-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    /* .primary-btn {
+        padding: 10px;
+        font-size: 16px;
+    } */
+    html, body{
+        margin: 0;
+        padding: 0 5px;
+    }
+    
+    .header-container nav ul li {
+        display: none;
+    }
+    .header-container nav ul li:last-child{
+    display: block;
+    }
+
+    .hero-container {
+        margin: 50px 0;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .hero-container .left-side {
+        
+        max-width: 100%;
+    }
+
+    .hero-container .hero-title {
+         font-size: 36px;
+    }
+
+    .hero-container .hero-buttons {
+        margin: 20px 0;
+        padding: 0;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .hero-container .hero-buttons button {
+        padding: 16px 10px 16px 10px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .hero-container .right-side {
+        margin: 50px 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-image:  url(./images/Images\ 2.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        
+    }
+
+    .hero-container .right-side .workout-title{
+        font-size: 25px;
+    }
+
+    .hero-container .right-side .triangle-shape {
+        display: none;
+    }
+
+    .hero-container .right-side .round-shape {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-container .right-side .free-workout {
+        margin: 50px 0 0 150px;
+        position: absolute;
+    }
+
+    .hero-container .right-side .video-tutorial {
+        margin-top: 20px;
+        padding: 0;
+        align-items: center;
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    html, body{
+        padding: 0 10px;
+    }
+
+    /* header {
+
+        background-image:  url(./images/Images\ 2.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    } */
+
+    .header-container nav ul li {
+        display: block;
+    }
+    
+    .header-container nav ul li:last-child{
+        display: none;
+    }
+
+    /* Hero section */
+
+
+    .hero-container {
+        margin: 50px 0;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .hero-container .left-side {
+        
+        max-width: 100%;
+    }
+
+    .hero-container .hero-title {
+         font-size: 36px;
+    }
+
+    .hero-container .hero-buttons {
+        margin: 20px 0;
+        padding: 0;
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: start;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-container .hero-buttons button {
+        padding: 16px 10px 16px 10px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        
+    }
+
+    .hero-container .right-side {
+        max-width: 100%;
+        margin: 50px 0;
+        padding: 0;  
+    }
+    .hero-container .right-side .triangle-shape {
+        display: none;
+    }
+
+    /* .hero-container .right-side .workout-title{
+        font-size: 25px;
+    }
+
+    .hero-container .right-side .triangle-shape {
+        display: none;
+    }
+
+    .hero-container .right-side .round-shape {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-container .right-side .free-workout {
+        margin: 50px 0 0 150px;
+        position: absolute;
+    }
+
+    .hero-container .right-side .video-tutorial {
+        margin-top: 20px;
+        padding: 0;
+        align-items: center;
+    } */
+}
