@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4bd24824a1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+      .manrope-font {
+        font-family: "Manrope", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        }
+    </style>
+    <title>Bike Zone</title>
+</head>
+<body>
+    <header class="bg-[#264653]">
+      <div class="max-w-screen-xl mx-2 md:mx-auto py-10">
+         <nav class=" md:flex flex-col items-end ">
+          <ul class=" flex gap-10 justify-between md:items-center manrope-font text-white">
+            <li><a class="block font-bold md:hidden" href="#"><i class="fa-solid fa-bars"></i></a></li>
+            <li><a class="hidden md:block font-bold" href="#">Home</a></li>
+            <li><a class="hidden md:block font-bold" href="#">Shop</a></li>
+            <li><a class="hidden md:block font-bold" href="#">News</a></li>
+            <li><a class="hidden md:block font-bold" href="#">Contact</a></li>
+            <li><a href="#"> <button class="py-2 px-10 bg-[#E76F51] rounded-lg font-bold cursor-pointer">Login</button> </a></li>
+          </ul>
+        </nav>
+
+       <div class="grid grid-cols-1 md:grid-cols-2 py-20 gap-10 items-center justify-between">
+          <div class="flex flex-col items-start gap-5">
+            <p class="text-gray-400 font">Computer-controlled digital transistorized with electronic advance</p>
+            <h1 class="text-5xl fong-bold text-white">Honda CBR 300R</h1>
+            <p class="text-gray-400 font">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button class="py-2 px-10 bg-[#E76F51] rounded-lg font-bold cursor-pointer text-white">Purchase</button>
+          </div>
+          <div class="flex justify-center">
+            <img src="images/slider/bike3.png" alt="Honda CBR 300R">
+          </div>
+       </div>
+      </div>
+    </header>
+
+    <main class="max-w-screen-xl mx-2 md:mx-auto">
+
+      <!-- Featured Bikes Section -->
+
+      <section class="mt-20">
+        <div class="flex flex-col items-center gap-2 text-center">
+            <h1 class="text-5xl font-bold">Fetured Bikes In This Year</h1>
+            <p class="text-[#E76F51]">Best bike collection</p>
+            <hr class="w-20 text-[#E76F51]">
+          </div>
+
+          <div class="my-20 grid grid-cols-1 md:grid-cols-3 items-center gap-10">
+            <div>
+              <img class="w-full" src="images/others/latest1.png" alt="Latest Bike 1">
+            </div>
+
+            <div>
+              <img class="w-full" src="images/others/latest2.png" alt="Latest Bike 1">
+            </div>
+
+            <div>
+              <img class="w-full" src="images/others/latest3.png" alt="Latest Bike 1">
+            </div>
+          </div>
+      </section>
+
+      <!-- Latest News Section -->
+
+      <section class="flex flex-col items-center gap-10">
+        <div class="text-center">
+          <h1 class="text-5xl font-bold" >Latest News</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="bg-white rounded-lg shadow-lg p-5 flex flex-col items-start gap-3">
+            <div class=""><img class="w-full" src="images/others/latest2.png" alt=""></div>
+            <h1 class="text-5xl font-bold">Ducati XDIAVEL S-73</h1>
+            <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+            <button class="bg-[#E76F51] py-2 px-10 rounded-lg font-bold text-white" >Read More</button>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-5 flex flex-col items-start gap-1">
+            <div class=""><img class="w-full" src="images/others/latest1.png" alt=""></div>
+            <h1 class="text-5xl font-bold">Ducati XDIAVEL S-73</h1>
+            <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+            <button class="bg-[#E76F51] py-2 px-10 rounded-lg font-bold text-white" >Read More</button>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-5 flex flex-col items-start gap-1">
+            <div class=""><img class="w-full" src="images/others/latest3.png" alt=""></div>
+            <h1 class="text-5xl font-bold">Ducati XDIAVEL S-73</h1>
+            <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+            <button class="bg-[#E76F51] py-2 px-10 rounded-lg font-bold text-white" >Read More</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Happy Clients Section -->
+
+      <section class="my-20 flex flex-col items-center gap-20">
+        <div>
+          <h1 class="text-5xl fong-bold text-center" >Happy <span class="text-[#E76F51]">Clients says</span></h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="bg-white border-3 border-gray-100 rounded-lg p-5 flex flex-col items-center gap-2">
+            <img src="images/others/user-1.png" alt="Profile Image" class="w-50 ceter">
+            <p class="text-gray-400 text-center">Slate helps you see how  many more days you need  to work to reach your financial  goal for the month and year.</p>
+            <div class="flex items-center gap-1 text-[#E76F51]">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4 class="font-bold text-blue-500">Regina Miles</h4>
+              <h4 class="font-bold text-gray-700">Banker</h4>
+            </div>
+          </div>
+          <div class="bg-white border-3 border-gray-100 rounded-lg p-5 flex flex-col items-center gap-2">
+            <img src="images/others/user-1.png" alt="Profile Image" class="w-50 ceter">
+            <p class="text-gray-400 text-center">Slate helps you see how  many more days you need  to work to reach your financial  goal for the month and year.</p>
+            <div class="flex items-center gap-1 text-[#E76F51]">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4 class="font-bold text-blue-500">Regina Miles</h4>
+              <h4 class="font-bold text-gray-700">Banker</h4>
+            </div>
+          </div>
+          <div class="bg-white border-3 border-gray-100 rounded-lg p-5 flex flex-col items-center gap-2">
+            <img src="images/others/user-1.png" alt="Profile Image" class="w-50 ceter">
+            <p class="text-gray-400 text-center">Slate helps you see how  many more days you need  to work to reach your financial  goal for the month and year.</p>
+            <div class="flex items-center gap-1 text-[#E76F51]">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4 class="font-bold text-blue-500">Regina Miles</h4>
+              <h4 class="font-bold text-gray-700">Banker</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently Asked Questions Section -->
+       <section class="my-20">
+        <div class="flex flex-col items-center gap-5">
+          <h1 class="text-5xl font-bold">Frequently Asked <span class="text-[#E76F51]">Questions</span></h1>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start py-20">
+            <!-- Image Content  -->
+            <div class="flex justify-center  ">
+              <img src="images/others/faq.png" alt="" class="w-cover">
+            </div>
+            <!-- FAQ Content -->
+            <div>
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                  <input type="radio" name="my-accordion-2" checked="checked" />
+                  <div class="collapse-title font-semibold">How do I create an account?</div>
+                  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                  <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                </div>
+            </div>
+          </div>   
+        </div>
+       </section>
+    </main>
+    <footer class="bg-black">
+      <div class="max-w-screen-xl mx-2 md:mx-auto py-10 grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-10 text-white ">
+        <!-- text section  -->
+         <div class="flex flex-col gap-2 justify-between items-center md:items-start">
+            <div >
+              <ul class="flex gap-2">
+                <li class=""><a href="#">Download Now</a> </li>
+                <li class=""><a href="#">License</a> </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="flex gap-2">
+                <li class=""><a href="#">About</a> </li>
+                <li class=""><a href="#">Features</a> </li>
+                <li class=""><a href="#">Pricing</a> </li>
+                <li class=""><a href="#">Contact</a> </li>
+              </ul>
+            </div>
+            <p class="text-sm text-gray-400">© 2020 bike. All rights reserved</p>
+         </div>
+
+        <!-- geth the app section  -->
+         <div class="flex flex-col gap-2 justify-between items-center md:items-end">
+            <h2 class="text-xl text-gray-400 text-start" >Get the App</h2>
+            <div class="max-w-40">
+              <img src="images/others/android.png" alt="" class="w-full">
+            </div>
+            <div class="max-w-40">
+              <img src="images/others/android.png" alt="">
+            </div>
+         </div>
+
+      </div>
+    </footer>
+</body>
+</html>
