@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/4bd24824a1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Drawer wrapper -->
+<div class="drawer lg:drawer-open">
+  <input id="left-drawer" type="checkbox" class="drawer-toggle" />
+  
+  <!-- Page content -->
+  <div class="drawer-content flex flex-col">
+    <!-- Toggle button (for mobile) -->
+    <label for="left-drawer" class="drawer-button lg:hidden m-4"><i class="fa-solid fa-bars text-2xl text-black"></i></label>
+     
+    <div class="py-2">
+
+        <!-- Top Navigation Bar  -->    
+         <div class="navbar bg-base-100 shadow-sm rounded-box my-5">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /> </svg>
+                        <span class="badge badge-sm indicator-item">8</span>
+                        </div>
+                    </div>
+                    <div
+                        tabindex="0"
+                        class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+                        <div class="card-body">
+                        <span class="text-lg font-bold">8 Items</span>
+                        <span class="text-info">Subtotal: $999</span>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-block">View cart</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                        <img
+                            alt="Tailwind CSS Navbar component"
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li>
+                        <a class="justify-between">
+                            Profile
+                            <span class="badge">New</span>
+                        </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+                 <button class="btn btn-ghost btn-circle">
+                    <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /> </svg>
+                        <span class="badge badge-xs badge-primary indicator-item"></span>
+                    </div>
+                </button>
+                
+            </div>
+            </div>
+
+            
+
+
+            <!-- Login Form  -->
+
+            <div id="login-section" class="flex justify-center items-center ">
+                <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                <legend class="fieldset-legend">Login</legend>
+
+                <label class="label">Email</label>
+                <input id="email" type="email" class="input" placeholder="Email" required />
+
+                <label class="label">Password</label>
+                <input id="password" type="password" class="input" placeholder="Password" required/>
+
+                <button id="login-btn" onclick="handleLogin()" class="btn btn-neutral mt-4">Login</button>
+                </fieldset>
+            </div>
+
+            <!-- Alert Container  -->
+
+            <div id="alert-container" class="mb-4"></div>
+
+        <!-- Table content -->
+         <div id="list-item" class="overflow-x-auto">
+        <table class="table">
+            <!-- head -->
+            <thead>
+            <tr>
+                <th>
+                <label>
+                    <input type="checkbox" class="checkbox" />
+                </label>
+                </th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Favorite Color</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row 1 -->
+            <tr>
+                <th>
+                <label>
+                    <input type="checkbox" class="checkbox" />
+                </label>
+                </th>
+                <td>
+                <div class="flex items-center gap-3">
+                    <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                        <img
+                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                    </div>
+                    <div>
+                    <div class="font-bold">Hart Hagerty</div>
+                    <div class="text-sm opacity-50">United States</div>
+                    </div>
+                </div>
+                </td>
+                <td>
+                Zemlak, Daniel and Leannon
+                <br />
+                <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                </td>
+                <td>Purple</td>
+                <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+                </th>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+                <th>
+                <label>
+                    <input type="checkbox" class="checkbox" />
+                </label>
+                </th>
+                <td>
+                <div class="flex items-center gap-3">
+                    <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                        <img
+                        src="https://img.daisyui.com/images/profile/demo/3@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                    </div>
+                    <div>
+                    <div class="font-bold">Brice Swyre</div>
+                    <div class="text-sm opacity-50">China</div>
+                    </div>
+                </div>
+                </td>
+                <td>
+                Carroll Group
+                <br />
+                <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+                </td>
+                <td>Red</td>
+                <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+                </th>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+                <th>
+                <label>
+                    <input type="checkbox" class="checkbox" />
+                </label>
+                </th>
+                <td>
+                <div class="flex items-center gap-3">
+                    <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                        <img
+                        src="https://img.daisyui.com/images/profile/demo/4@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                    </div>
+                    <div>
+                    <div class="font-bold">Marjy Ferencz</div>
+                    <div class="text-sm opacity-50">Russia</div>
+                    </div>
+                </div>
+                </td>
+                <td>
+                Rowe-Schoen
+                <br />
+                <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+                </td>
+                <td>Crimson</td>
+                <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+                </th>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+                <th>
+                <label>
+                    <input type="checkbox" class="checkbox" />
+                </label>
+                </th>
+                <td>
+                <div class="flex items-center gap-3">
+                    <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                        <img
+                        src="https://img.daisyui.com/images/profile/demo/5@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                    </div>
+                    <div>
+                    <div class="font-bold">Yancy Tear</div>
+                    <div class="text-sm opacity-50">Brazil</div>
+                    </div>
+                </div>
+                </td>
+                <td>
+                Wyman-Ledner
+                <br />
+                <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+                </td>
+                <td>Indigo</td>
+                <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+                </th>
+            </tr>
+            </tbody>
+            <!-- foot -->
+            <tfoot>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Favorite Color</th>
+                <th></th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    </div>
+   
+  </div>
+  
+  <!-- Sidebar -->
+  <div class="drawer-side">
+    <label for="left-drawer" class="drawer-overlay"></label>
+    <ul id="menu" class="menu p-4 w-64 min-h-full bg-base-200 text-base-content">
+      <li><a class="text-lg font-semibold">Dashboard</a></li>
+      <li><a id="user">Users</a></li>
+      <li><a>Projects</a></li>
+      <li><a>Settings</a></li>
+    </ul>
+  </div>
+</div>
+
+ 
+
+<script src="./logic.js"></script>    
+</body>
+</html>
