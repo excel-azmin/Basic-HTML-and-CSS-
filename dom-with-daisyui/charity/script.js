@@ -28,3 +28,7 @@ function activateTab(event) {
   activeTabContent.classList.remove('hidden');
   activeTabContent.classList.add('block');
 }
+
+function showModal(){
+  document.getElementById('my_modal_5').showModal()
+}
