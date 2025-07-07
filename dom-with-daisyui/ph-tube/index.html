@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/4bd24824a1.js" crossorigin="anonymous"></script>
+    <title>PH Tube</title>
+</head>
+<body>
+
+    <header class="lg:max-w-11/12 mx-auto">
+        <nav class="">
+            <div class="navbar bg-base-100 border-b-2 border-base-300 flex item-center justify-space-between lg:py-8">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-contentrounded-box z-1 mt-3 w-52 p-2">
+                    
+                  </ul>
+                </div>
+                <a class="btn btn-ghost text-xl"> <img src="./Logo.png" alt=""></a>
+
+              </div>
+              <div class="navbar-center hidden lg:flex item-center  w-full max-w-200 ">
+                <label class="input flex-inline w-full max-w-200 outline-none focus:outline-none focus:border-none focus:ring-0">
+                      <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          stroke-width="2.5"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                      </svg>
+                      <input id="searh-input" type="search" required placeholder="Search" />
+                    </label>
+              </div>
+              <div class="navbar-end">
+                <a class="btn bg-[#FF1F3D] text-white font-bold py-3">Sort</a>
+              </div>
+            </div>
+        </nav>
+        <div id="categories" class="flex w-full justify-center items-center gap-4 mt-8">
+            <!-- <a class="btn bg-[#FF1F3D] text-white font-bold py-5">All</a>
+            <a class="btn bg-gray-200 text-gray-500 font-bold py-5">Music</a>
+            <a class="btn bg-gray-200 text-gray-500 font-bold py-5">Comedy</a>
+            <a class="btn bg-gray-200 text-gray-500 font-bold py-5">Drawing</a> -->
+        </div>
+    </header>
+
+    <main>
+
+      <section id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2
+      lg:grid-cols-4 gap-4 mt-8">
+
+      <!-- Open the modal using ID.showModal() method -->
+        
+      </section>
+
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+          <dialog id="videoDetailsModal" class="modal modal-bottom sm:modal-middle">
+            <div id="modal-content" class="modal-box">
+            </div>
+          </dialog>
+
+
+       
+    </main>
+
+
+<script src="./script.js"></script>    
+</body>
+</html>
