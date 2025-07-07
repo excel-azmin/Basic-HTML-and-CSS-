@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/4bd24824a1.js" crossorigin="anonymous"></script>
+    
     <title>Donate Bangladesh</title>
 </head>
 <body>
+    <header class="bg-[#F9F7F3] py-5 shadow-lg">
+        <nav class="max-w-11/12 mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        </div>
+                        <ul
+                            tabindex="0"
+                            class="menu menu-sm dropdown-content bg-[#F9F7F3] rounded-box z-1 mt-3 w-52 p-2 font-bold">
+                            <li class="md:hidden"><a>Blog</a></li>
+                            <li><a>Donate</a></li>
+                            <li><a>History</a></li>
+                        </ul>
+                    </div>
+                    <button class="hidden md:inline-flex btn btn-active bg-[#B4F461] outline-none font-bold">Blog</button>
+
+                </div>
+                <div class="navbar-center hidden md:flex items-center justify-center gap-4">
+                    <div class="">
+                        <img src="./assets/logo.png" alt="Logo" class="w-full p-2">
+                    </div>
+                    <h1 class="md:text-2xl text-3xl font-bold">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/coin.png" alt="">
+                        <span class="text-2xl font-bold">1000 BDT</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-10/12  mx-auto my-10">
+
+        <section class="p-6  bg-[#F9F7F3] rounded-lg shadow-lg">
+            <div class="flex items-center justify-center gap-2">
+                <button class="tab-btn btn btn-active bg-[#B4F461] outline-none font-bold" value="donation" onclick="activateTab(event)">Donation</button>
+                <button class="tab-btn btn border-gray-400 outline-none font-bold" value="history" onclick="activateTab(event)">History</button>
+            </div>
+
+            <div id="donation" class="max-h-screen bg-black ">
+                Donation
+            </div>
+
+            <div id="history" class="hidden">
+                History
+            </div>
+            
+            
+        </section>
+
+    </main>
+    <footer></footer>
     
+    <script src="./script.js"> </script>
 </body>
 </html>
