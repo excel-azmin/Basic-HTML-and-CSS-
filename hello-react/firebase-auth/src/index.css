@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+/* #root {
+  width: 1400px;
+  margin: 0 auto;
+} */
