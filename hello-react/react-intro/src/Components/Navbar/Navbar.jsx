@@ -4,17 +4,17 @@ import { FaChildReaching } from 'react-icons/fa6';
 import { getGoingFromLocal, getVisitedFromLocal } from '../../Utils/setGoing';
 import Country from '../Country/Country';
 
-export default function Navbar() {
-  const [goingCountries, setGoingCountries] = React.useState([]);
-  const [visitedCountries, setVisitedCountries] = React.useState([]);
+export default function Navbar({ goingCountries, visitedCountries }) {
+  const [goingCountriesLocal, setGoingCountriesLocal] = React.useState([]);
+  const [visitedCountriesLocal, setVisitedCountriesLocal] = React.useState([]);
   React.useEffect(() => {
     const going = getGoingFromLocal();
-    setGoingCountries(going);
+    setGoingCountriesLocal(going);
   }, []);
 
   React.useEffect(() => {
     const visited = getVisitedFromLocal();
-    setVisitedCountries(visited);
+    setVisitedCountriesLocal(visited);
   }, []);
 
   return (
@@ -103,7 +103,9 @@ export default function Navbar() {
             onClick={() => document.getElementById('going_modal').showModal()}
           >
             {<FaWalking />}
-            {goingCountries.length}
+            {goingCountries.length > 0
+              ? goingCountries.length
+              : goingCountriesLocal.length}
           </button>
 
           {/* Modal  */}
@@ -119,9 +121,9 @@ export default function Navbar() {
               <h3 className="font-bold text-2xl text-center">
                 Going Countries
               </h3>
-              {goingCountries.length > 0 ? (
+              {goingCountriesLocal.length > 0 ? (
                 <ul className="list-disc pl-5">
-                  {goingCountries.map((country, index) => (
+                  {goingCountriesLocal.map((country, index) => (
                     <Country key={index} country={country} />
                   ))}
                 </ul>
@@ -136,7 +138,7 @@ export default function Navbar() {
             onClick={() => document.getElementById('visited_modal').showModal()}
           >
             {<FaChildReaching />}
-            {visitedCountries.length}
+            {visitedCountries ? visitedCountries : visitedCountriesLocal.length}
           </button>
 
           {/* Visited Modal  */}
@@ -152,9 +154,9 @@ export default function Navbar() {
               <h3 className="font-bold text-2xl text-center">
                 Visited Countries
               </h3>
-              {visitedCountries.length > 0 ? (
+              {visitedCountriesLocal.length > 0 ? (
                 <ul className="list-disc pl-5">
-                  {visitedCountries.map((country, index) => (
+                  {visitedCountriesLocal.map((country, index) => (
                     <Country key={index} country={country} />
                   ))}
                 </ul>

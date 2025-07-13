@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import Country from '../Country/Country';
 import { setGoingToLocal, setVisitedToLocal } from '../../Utils/setGoing';
 
-export default function Destinations() {
+export default function Destinations({
+  setGoingCountries,
+  setVisitedCountries,
+}) {
   const [destinations, setDestinations] = useState([]);
-  const [goingCountries, setGoingCountries] = useState([]);
-  const [visitedCountries, setVisitedCountries] = useState([]);
+  // const [goingCountries, setGoingCountries] = useState([]);
+  // const [visitedCountries, setVisitedCountries] = useState([]);
 
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/independent?status=true')

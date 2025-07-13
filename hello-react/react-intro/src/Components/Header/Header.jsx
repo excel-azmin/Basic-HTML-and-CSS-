@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import Hero from '../Hero/Hero';
 import HeaderImage from '../../assets/Decore.png';
 
-export default function Header() {
+export default function Header({ goingCountries, visitedCountries }) {
   return (
     <>
       <div
@@ -15,7 +15,10 @@ export default function Header() {
         }}
       >
         <div className="max-w-screen-xl mx-auto bg-cover bg-center py-10">
-          <Navbar />
+          <Navbar
+            goingCountries={goingCountries}
+            visitedCountries={visitedCountries}
+          />
           <Hero />
         </div>
       </div>

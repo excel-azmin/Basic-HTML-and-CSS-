@@ -8,10 +8,18 @@ import Header from './Components/Header/Header';
 import Destinations from './Components/Destinations/Destinations';
 
 function App() {
+  const [goingCountries, setGoingCountries] = useState([]);
+  const [visitedCountries, setVisitedCountries] = useState([]);
   return (
     <>
-      <Header />
-      <Destinations />
+      <Header
+        goingCountries={goingCountries}
+        visitedCountries={visitedCountries}
+      />
+      <Destinations
+        setGoingCountries={setGoingCountries}
+        setVisitedCountries={setVisitedCountries}
+      />
     </>
   );
 }
