@@ -1,52 +1,57 @@
-import React, { createContext, useEffect, useState } from 'react';
-import {  createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import { AUTH } from '../config/firebase.init';
-
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from 'firebase/auth';
+import { createContext, useEffect, useState } from 'react';
+import { AUTH, AUTH_PROVIDER } from '../config/firebase.init';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
-
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-
-  const createUser = (email, password) => { 
-    return createUserWithEmailAndPassword(AUTH, email, password)
-    
-  }
+  const createUser = (email, password) => {
+    setLoading(true);
+    return createUserWithEmailAndPassword(AUTH, email, password);
+  };
 
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(AUTH, email, password);
-  }
+  };
+
+  const signInWithGoogle = () => {
+    setLoading(true);
+    return signInWithPopup(AUTH, AUTH_PROVIDER);
+  };
 
   const signOutUser = () => {
-    return AUTH.signOut();
-  }
+    setLoading(true);
+    return signOut(AUTH);
+  };
 
- 
-  useEffect( () => {
+  useEffect(() => {
     const unSubscribe = onAuthStateChanged(AUTH, (currentUser) => {
-      if (currentUser) {
-        console.log('User is signed in:', currentUser);
-         setUser(currentUser);
-      } else {
-        console.log('No user is signed in');
-      }
-     
+      console.log('Auth state changed:', currentUser);
+      setUser(currentUser);
+      setLoading(false);
     });
     return () => {
-      unSubscribe(); 
-    }
-  }, [])
-
-  
-    
+      unSubscribe();
+    };
+  }, []);
 
   const authInfo = {
     user,
+    loading,
     createUser,
     signInUser,
+    signInWithGoogle,
     signOutUser,
   };
 
