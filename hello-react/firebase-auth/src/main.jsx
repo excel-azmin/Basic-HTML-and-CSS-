@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Register from './components/Register/Register.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
+import PrivateRoutes from './routes/PrivateRoutes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'dashboard',
-        element: <Dashboard />,
+        element: <PrivateRoutes> <Dashboard /> </PrivateRoutes> 
       },
     ],
   },

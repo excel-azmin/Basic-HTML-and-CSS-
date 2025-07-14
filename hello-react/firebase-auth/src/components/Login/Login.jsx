@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../../provider/AuthProvider';
 
 export default function Login() {
+
+  const { signInUser} = useContext(AuthContext)
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Login form submitted');
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(`Email: ${email}, Password: ${password}`);
     // Handle login logic here
+    signInUser(email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log('User logged in:', user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Error during login:', errorCode, errorMessage);
+      });
+    event.target.reset();
   };
   return (
     <>
@@ -47,7 +61,7 @@ export default function Login() {
                     Login
                   </button>
                   <p className="pt-5 text-end">
-                    Need an account? <NavLink to="/register">Register</NavLink>
+                    Need an account? <NavLink to="/register" className="text-teal-700 font-bold">Register</NavLink>
                   </p>
                 </fieldset>
               </div>

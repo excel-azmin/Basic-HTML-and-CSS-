@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../../provider/AuthProvider';
 
 export default function Register() {
+
+  const {createUser} = useContext(AuthContext)
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Registration form submitted');
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(`Email: ${email}, Password: ${password}`);
     // Handle registration logic here
+    createUser(email,password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log('User registered:', user);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Error during registration:', errorCode, errorMessage);
+    });
+    event.target.reset();
   };
 
   return (
@@ -43,7 +57,7 @@ export default function Register() {
                   />
                   <button className="btn btn-neutral mt-4">Register</button>
                   <p className="pt-5 text-end">
-                    Already Have an account? <NavLink to="/">Login</NavLink>
+                    Already Have an account? <NavLink to="/" className="text-teal-700 font-bold">Login</NavLink>
                   </p>
                 </fieldset>
               </div>
