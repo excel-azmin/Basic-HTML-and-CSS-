@@ -105,6 +105,6 @@
 
   // ✅ Automatically remove unused imports on save
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   }
 }
